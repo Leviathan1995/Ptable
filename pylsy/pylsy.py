@@ -21,10 +21,7 @@ class PylsyTable:
             if col.has_key(attribute):
                 dictvalues=[]
                 for value in values:
-                    if type(value)!=str:
-                        dictvalues.append(str(value))
-                    else:
-                        dictvalues.append(value)
+                    dictvalues.append(u"{0}".format(value))
                 col[attribute]=dictvalues
     def CreateTable(self):
         for col in self.Table:
