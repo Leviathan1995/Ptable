@@ -14,7 +14,7 @@ class pylsytable(object):
         self.Lines_num = 0
         for attribute in self.Attributes:
             col = dict()
-            col[attribute] = ""
+            col[attribute] = []
             self.Table.append(col)
 
     def print_divide(self):
@@ -28,7 +28,7 @@ class pylsytable(object):
         for col in self.Table:
             if attribute in col:
                 dict_values = [str(value) for value in values]
-                col[attribute] = dict_values
+                col[attribute] += dict_values
 
     def create_table(self):
         self.StrTable = ""
