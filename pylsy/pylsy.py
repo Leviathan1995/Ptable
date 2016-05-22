@@ -31,7 +31,11 @@ class pylsytable(object):
             self.StrTable += "+ " + "- " * space
         self.StrTable += "+"+"\n"
 
-    def append_data(self, attribute, values):
+    def append_data(self, attribute, value):
+        """Extend the given values to the attribute."""
+        self.extend_data(attribute, [value])
+
+    def extend_data(self, attribute, values):
         """Appends the given value(s) to the attribute (column)."""
         found = False
         if type(values) != list:
